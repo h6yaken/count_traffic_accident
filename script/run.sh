@@ -3,7 +3,7 @@ set -e
 
 function main () {
   python3 -m venv venv
-  source venv/bin/avtivate
+  source venv/bin/activate
 
   pip install -r requirements.txt
   
