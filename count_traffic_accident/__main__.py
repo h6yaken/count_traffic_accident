@@ -8,6 +8,9 @@ def main():
     r = session.get("https://www.keishicho.metro.tokyo.jp/jiken_jiko/hassei/jiko.html")
 
     about = r.html.find('.t-box2', first=True)
+    if about == None:
+        exit("[ERROR] site format is changed.")
+    
     rows = about.text.split("\n")
     print(rows[0])
     for index in range(len(rows)):
@@ -20,10 +23,14 @@ def main():
 
     sel = "#main > div > div:nth-child(4) > p:nth-child(2)"
     about = r.html.find(sel, first=True)
+    if about == None:
+        exit("[ERROR] site format is changed.")
     print(about.text)
 
     sel = "#main > div > div:nth-child(4) > p:nth-child(4)"
     about = r.html.find(sel, first=True)
+    if about == None:
+        exit("[ERROR] site format is changed.")
     print(about.text)
     
 
