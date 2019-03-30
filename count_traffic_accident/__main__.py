@@ -18,11 +18,11 @@ def main():
         if rows[index] == "負傷者数":
             print(rows[index] + ": " + rows[index + 1])
 
-    sel = "#main > div > p:nth-child(5)"
+    sel = "#main > div > div:nth-child(4) > p:nth-child(2)"
     about = r.html.find(sel, first=True)
     print(about.text)
 
-    sel = "#main > div > p:nth-child(7)"
+    sel = "#main > div > div:nth-child(4) > p:nth-child(4)"
     about = r.html.find(sel, first=True)
     print(about.text)
     
