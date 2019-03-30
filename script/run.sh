@@ -2,7 +2,7 @@
 set -e
 
 function main () {
-  # * 12 * * * /home/[User]/count_traffic_accident/script/run.sh >> /home/[User]/count_traffic_accident/accident.log
+  # 0 12 * * * /home/[User]/count_traffic_accident/script/run.sh >> /home/[User]/count_traffic_accident/accident.log
   # 上記のようにcronを設定した場合、ディレクトリの移動が必要
   cd /home/kento-hayakawa/count_traffic_accident
 
